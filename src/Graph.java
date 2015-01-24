@@ -75,6 +75,11 @@ public class Graph {
 		w.edges.put(v, e);
 		edges++;
 	}
+	public void chooseSource(int label) {
+		Node source = getNode(label);
+		source.dist = 0;
+		
+	}
 	
 	//if a node exists
 	public boolean containsVertex(int label) {
@@ -115,6 +120,11 @@ public class Graph {
 		if (!containsVertex(label))
 			throw new IllegalArgumentException("Graph doesn't contain such node!");
 		return getNode(label).neighbors.size();
+	}
+	
+	
+	public int getSize() {
+		return size;
 	}
 	
 	

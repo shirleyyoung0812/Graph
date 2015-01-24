@@ -58,9 +58,9 @@ public class FindFriends {
 			double v = 0;
 			for (Node friend : connectingFriends.get(fof)) {
 				//distance between user and friend
-				double u_f = user.edges.get(friend).getWeight(user, friend);
+				double u_f = (double)user.edges.get(friend).getWeight(user, friend);
 				//distance between friend and fof
-				double f_fof = friend.edges.get(fof).getWeight(friend, fof);
+				double f_fof = (double)friend.edges.get(fof).getWeight(friend, fof);
 				v += Math.pow(u_f * f_fof, -0.3) / Math.sqrt(friend.neighbors.size());
 			}
 			distanceFOF.put(fof, v);

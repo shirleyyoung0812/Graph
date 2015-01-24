@@ -65,10 +65,13 @@ public class GraphTester {
 		netWork.addEdge(13, 16, 3);
 		netWork.addEdge(14, 15, 27);
 		netWork.addEdge(15, 16, 7);
-		System.out.println(netWork.toString());
-		//FindFriends ff = new FindFriends (netWork.getNode(9), 3, 16);
-		//System.out.println(ff.recommendedFriend());
-		//System.out.println(ff.connection(netWork.getNode(7)));
+		//System.out.println(netWork.toString());
+		/*FindFriends ff = new FindFriends (netWork.getNode(1), 3, 16);
+		System.out.println(ff.recommendedFriend());
+		System.out.println(ff.connection(netWork.getNode(7)));*/
+		Dijkstra dij = new Dijkstra(netWork, 13);
+		dij.getShortestPath(1);
+		System.out.println(dij.shortestPath(1));
 	}
 
 }
